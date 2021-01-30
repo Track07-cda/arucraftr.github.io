@@ -1,1 +1,1 @@
-# Minecraft-Craftr.github.io
+# craftr.io
