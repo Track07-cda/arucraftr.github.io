@@ -65,3 +65,13 @@ footer.page-footer {
   margin-top: 35vh;
   margin-bottom: 20vh;
 }
+
+.waifu{
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  font-size: 0;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
