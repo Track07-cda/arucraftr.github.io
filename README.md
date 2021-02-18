@@ -2,6 +2,6 @@
 
 建设中............
 
-https://minecraft-craftr.github.io
+https://arucraftr.github.io
 
 网页Live2D及Live2D API来自于fghrsh
