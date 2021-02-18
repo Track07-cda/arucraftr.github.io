@@ -1,6 +1,5 @@
-# 这是Craftr服务器官网页面
+# 这是aruCraftR服务器官网页面
 
 建设中............
 
-## 服务器群:1091446761
-
+minecraft-craftr.github.io
