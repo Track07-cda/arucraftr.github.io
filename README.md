@@ -4,4 +4,4 @@
 
 minecraft-craftr.github.io
 
-网页Live2D及Live2D来自于fghrsh
+网页Live2D及Live2D API来自于fghrsh
