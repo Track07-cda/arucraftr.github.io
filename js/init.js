@@ -16,4 +16,5 @@
       stoppropagation : true
     }
   );
+  $('.tooltipped').tooltip({delay: 50});
 })(jQuery); // end of jQuery name space
