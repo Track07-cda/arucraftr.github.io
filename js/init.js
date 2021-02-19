@@ -16,5 +16,13 @@
       stoppropagation : true
     }
   );
-  $('.tooltipped').tooltip({delay: 50});
+  $('.tooltipped').tooltip({delay: 100});
+  $(this).scroll(function(){
+    var scroll_pos = $(this).scrollTop()
+    if(scroll_pos > 50){
+      $('.navbar-bg').css("opacity","1")
+    }else{
+      $('.navbar-bg').css("opacity","0")
+    }
+    })
 })(jQuery); // end of jQuery name space
