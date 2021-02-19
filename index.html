@@ -14,17 +14,6 @@
     <link rel="icon" href="/favicon/favicon.ico">
 </head>
 <body>
-    <script type="text/javascript">
-        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE? 这tm什么年代了还在用IE
-          alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
-        }
-    </script>
-    <!-- waifu-tips.js 依赖 JQuery 库 -->
-    <script src="assets/jquery.min.js?v=3.3.1"></script>
-    
-    <!-- 实现拖动效果，需引入 JQuery UI -->
-    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
-    
     <div class="waifu reveal" data-reveal-distance="300px" data-reveal-delay="500" data-reveal-duration="1200" data-reveal-reset="0">
         <div class="waifu-tips"></div>
         <canvas id="live2d" class="live2d"></canvas>
@@ -38,20 +27,6 @@
             <span class="fui-cross"></span>
         </div>
     </div>
-        
-    <script src="assets/waifu-tips.min.js?v=1.4.2"></script>
-    <script src="assets/live2d.min.js?v=1.0.5"></script>
-    <script type="text/javascript">
-        /* 可直接修改部分参数 */
-        live2d_settings['hitokotoAPI'] = 'hitokoto.cn';
-        live2d_settings['modelId'] = 1;
-        live2d_settings['modelTexturesId'] = 87;
-        live2d_settings['modelStorage'] = false;
-        live2d_settings['waifuEdgeSide'] = 'right:30';
-        live2d_settings['waifuDraggable'] = 'axis-x';
-        /* 在 initModel 前添加 */
-        initModel("assets/waifu-tips.json?v=1.4.2")
-    </script>
     <!--导航栏 最外围容器起固定作用-->
     <div class="navbar-fixed">
         <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px" data-reveal-duration="1000" data-reveal-reset="0">
@@ -85,7 +60,6 @@
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a href="https://jq.qq.com/?_wv=1027&k=Ot8SRDbh" target="_blank">QQ</a></li>
                         <li><a href="https://discord.gg/zQzBPCW" target="_blank">Discord</a></li>
-                        <li class="divider"></li>
                     </ul>
                 </div>
                 <br><br>
@@ -101,7 +75,7 @@
 
             <!--   Icon Section   -->
             <div class="row">
-                <div class="col s12 m4 invisible reveal" data-reveal-distance="40px" data-reveal-duration="500" data-reveal-reset="1">
+                <div class="col s12 m4 invisible reveal" data-reveal-distance="40px" data-reveal-duration="500">
                     <div class="icon-block">
                         <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
                         <h5 class="center">快 速 访 问</h5>
@@ -110,7 +84,7 @@
                     </div>
                 </div>
 
-                <div class="col s12 m4 invisible reveal" data-reveal-distance="40px" data-reveal-delay="250" data-reveal-duration="500" data-reveal-reset="1">
+                <div class="col s12 m4 invisible reveal" data-reveal-distance="40px" data-reveal-delay="250" data-reveal-duration="500">
                     <div class="icon-block">
                         <h2 class="center brown-text"><i class="material-icons">group</i></h2>
                         <h5 class="center">团 队 合 作</h5>
@@ -120,7 +94,7 @@
                 </div>
 
 
-                <div class="col s12 m4 invisible reveal" data-reveal-distance="40px" data-reveal-delay="500" data-reveal-duration="500" data-reveal-reset="1">
+                <div class="col s12 m4 invisible reveal" data-reveal-distance="40px" data-reveal-delay="500" data-reveal-duration="500">
                     <div class="icon-block">
                         <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
                         <h5 class="center">轻 松 游 玩</h5>
@@ -138,8 +112,8 @@
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
             <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light">由玩家Luces_建造<br>"Luces_,我的Luces_...."----YGOOB
+                <div class="row center reveal" data-reveal-distance="-50px" data-reveal-duration="500">
+                    <h5 class="header col s12 light">这里没有任何限制<br>你可以发挥你的特长<br>只有一个要求，不要<a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="最可怕的不是熊，是不懂红石还非要用精密机器的小天才">熊服</a>
                     </h5>
                 </div>
             </div>
@@ -153,8 +127,10 @@
             <div class="row">
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>历经两周目</h4>
-                    <p class="left-align light">第一周目为Craftr服务器，服主为Yikex。<br>第二周目，也就是现周目，服主为sophie_desu。<br> - 在此也感谢Track07_cda与YGOOB的帮助，当然，还有<a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="建议服务器名称为KDH和GayCraft是什么啊喂">积极提出建议</a>的大家！</p>
+                    <h4 class="reveal" data-reveal-distance="-40px" data-reveal-duration="500">历经两周目</h4>
+                    <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px" data-reveal-delay="300" data-reveal-duration="500">第一周目为Craftr服务器，服主为Yikex。</p>
+                    <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px" data-reveal-delay="600" data-reveal-duration="500">第二周目，也就是现周目，服主为sophie_desu。</p>
+                    <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px" data-reveal-delay="900" data-reveal-duration="500"> - 在此也感谢Track07_cda与YGOOB的帮助，当然，还有<a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="建议服务器名称为KDH和GayCraft是什么啊喂">积极提出建议</a>的大家！</p>
                 </div>
             </div>
 
@@ -208,11 +184,35 @@
 
 
     <!--  Scripts-->
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery-ui.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/appear.min.js"></script>
     <script src="js/scrollreveal.js"></script>
     <script src="js/init.js"></script>
     <script src="js/general.js"></script>
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE? 这tm什么年代了还在用IE
+          alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
+        }
+    </script>
+    <script src="assets/waifu-tips.min.js"></script>
+    <script src="assets/live2d.min.js"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        live2d_settings['hitokotoAPI'] = 'hitokoto.cn';
+        live2d_settings['modelId'] = 1;
+        live2d_settings['canCloseLive2d'] = false;
+        live2d_settings['canTurnToHomePage'] = false;
+        live2d_settings['modelTexturesId'] = 87;
+        live2d_settings['modelStorage'] = false;
+        live2d_settings['showToolMenu']=true;
+        live2d_settings['canSwitchTextures']=true;
+        live2d_settings['canSwitchModel']=true;
+        live2d_settings['waifuEdgeSide'] = 'right:30';
+        live2d_settings['waifuDraggable'] = 'axis-x';
+        initModel("assets/waifu-tips.json")
+    </script>
 
 </body>
 
