@@ -82,6 +82,14 @@ footer.page-footer {
   left: -10%;
 }
 
+#load_page{
+  display: inline;
+  width: 100vw;
+  height: 110vh;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
 .waifu{
   display: inline-block;
   position: fixed;

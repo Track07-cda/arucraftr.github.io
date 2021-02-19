@@ -1,6 +1,9 @@
 (function($){
   $(function(){
 
+    $('#load_page').css("display","none")
+    $('body').css("overflow","auto")
+
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
