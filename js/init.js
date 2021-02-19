@@ -17,6 +17,4 @@
     }
   );
   $('.tooltipped').tooltip({delay: 50});
-  $(".invisible:visible").delay(800).addClass("enter");
-  $(".invisible:visible").delay(800).removeClass("invisible");
 })(jQuery); // end of jQuery name space
