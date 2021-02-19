@@ -110,4 +110,19 @@ nav .nav-wrapper{
 
 body{
   font-family: 'dylech30th';
+  background-image: url('http://fp1.fghrsh.net/2021/02/18/d02cdbb7634a17b4d6c7791f2b61c120.png!q80.webp');
+}
+
+.collapsible{
+  color:#444;
+}
+
+.collapsible-body{
+  background-color: #ffffffd0;
+}
+
+.collapsible{
+  position: absolute;
+  width: 50vw;
+  top: 150px;
 }

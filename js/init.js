@@ -19,6 +19,7 @@
       stoppropagation : true
     }
   );
+  $('.collapsible').collapsible();
   $('.tooltipped').tooltip({delay: 100});
   $(this).scroll(function(){
     var scroll_pos = $(this).scrollTop()
@@ -29,3 +30,8 @@
     }
     })
 })(jQuery); // end of jQuery name space
+
+window.onbeforeunload=function(){
+  $('#load_page').css("display","inline")
+  $('body').css("overflow","hidden")
+};
