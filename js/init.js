@@ -34,4 +34,5 @@
 window.onbeforeunload=function(){
   $('#load_page').css("display","inline")
   $('body').css("overflow","hidden")
+  $('body').css("background-color","white")
 };
