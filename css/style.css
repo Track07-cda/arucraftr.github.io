@@ -112,3 +112,21 @@ nav .nav-wrapper{
 body{
   font-family: 'dylech30th';
 }
+
+.invisible{
+  visibility: visible;
+  -webkit-transform: translateY(40px) scale(1.01);
+  opacity: 0;
+  transform: translateY(40px) scale(1.01);
+  opacity: 0;
+}
+
+.enter{
+  visibility: visible;
+  -webkit-transform: translateY(0) scale(1);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(.51, .07, .75, .95) 0s, opacity 0.6s cubic-bezier(.51, .07, .75, .95) 0s;
+  transition: transform 0.6s cubic-bezier(.51, .07, .75, .95) 0s, opacity 0.6s cubic-bezier(.51, .07, .75, .95) 0s;
+}
