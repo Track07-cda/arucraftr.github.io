@@ -34,62 +34,6 @@ $(function($) {
     $html.addClass(is_mobile ? 'mobile' : 'no-mobile');
 
     //------------------------------------------------------------------------------------------------------------------
-    // Scroll Reveal
-    //------------------------------------------------------------------------------------------------------------------
-
-    window.sr = ScrollReveal();
-
-    $('.reveal').each(function() {
-
-        var $this = $(this),
-            config = {
-                easing: 'cubic-bezier(.51, .07, .75, .95)',
-                mobile: false,
-                scale : 1.01
-            };
-
-        var data_container = $this.data('reveal-container'),
-            data_origin    = $this.data('reveal-origin'),
-            data_distance  = $this.data('reveal-distance'),
-            data_duration  = $this.data('reveal-duration'),
-            data_delay     = $this.data('reveal-delay'),
-            data_easing    = $this.data('reveal-easing'),
-            data_scale     = $this.data('reveal-scale'),
-            data_opacity   = $this.data('reveal-opacity'),
-            data_reset     = $this.data('reveal-reset');
-
-        if (typeof data_container !== 'undefined') config['container'] = data_container;
-        if (typeof data_origin    !== 'undefined') config['origin']    = data_origin;
-        if (typeof data_distance  !== 'undefined') config['distance']  = data_distance;
-        if (typeof data_duration  !== 'undefined') config['duration']  = data_duration;
-        if (typeof data_delay     !== 'undefined') config['delay']     = data_delay;
-        if (typeof data_easing    !== 'undefined') config['easing']    = data_easing;
-        if (typeof data_scale     !== 'undefined') config['scale']     = data_scale;
-        if (typeof data_opacity   !== 'undefined') config['opacity']   = data_opacity;
-        if (typeof data_reset     !== 'undefined') config['reset']     = 1 ? true : false;
-
-        sr.reveal($this, config);
-    });
-
-    //------------------------------------------------------------------------------------------------------------------
-    // TODO: DEMO ONLY
-    //------------------------------------------------------------------------------------------------------------------
-
-    //
-    // Button: Load more comments
-    //
-
-    $('.demo-button-load-more-comments').on('click', function () {
-
-        var $btn = $(this).button('loading');
-
-        setTimeout(function() {
-            $btn.button('reset')
-        }, 1500);
-
-    });
-
-    //------------------------------------------------------------------------------------------------------------------
     // Finish loading
     //------------------------------------------------------------------------------------------------------------------
 
@@ -101,6 +45,38 @@ $(function($) {
         $preloader.delay(1500).fadeOut('slow');
 
         setTimeout(function() { $body.addClass('loaded'); }, 1000);
+
+        window.sr = ScrollReveal();
+        console.log('已加载')
+        $('.reveal').each(function() {
+            console.log('已遍历')
+            var $this = $(this),
+                config = {
+                    easing: 'cubic-bezier(.51, .07, .75, .95)',
+                    mobile: false,
+                    scale : 1.01
+                };
+            var data_container = $this.data('reveal-container'),
+                data_origin    = $this.data('reveal-origin'),
+                data_distance  = $this.data('reveal-distance'),
+                data_duration  = $this.data('reveal-duration'),
+                data_delay     = $this.data('reveal-delay'),
+                data_easing    = $this.data('reveal-easing'),
+                data_scale     = $this.data('reveal-scale'),
+                data_opacity   = $this.data('reveal-opacity'),
+                data_reset     = $this.data('reveal-reset');
+            if (typeof data_container !== 'undefined') config['container'] = data_container;
+            if (typeof data_origin    !== 'undefined') config['origin']    = data_origin;
+            if (typeof data_distance  !== 'undefined') config['distance']  = data_distance;
+            if (typeof data_duration  !== 'undefined') config['duration']  = data_duration;
+            if (typeof data_delay     !== 'undefined') config['delay']     = data_delay;
+            if (typeof data_easing    !== 'undefined') config['easing']    = data_easing;
+            if (typeof data_scale     !== 'undefined') config['scale']     = data_scale;
+            if (typeof data_opacity   !== 'undefined') config['opacity']   = data_opacity;
+            if (typeof data_reset     !== 'undefined') config['reset']     = 1 ? true : false;
+
+            sr.reveal($this, config);
+        });
 
     });
 

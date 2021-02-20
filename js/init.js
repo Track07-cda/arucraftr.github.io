@@ -1,6 +1,5 @@
 (function($){
   $(function(){
-    $('#load_page').css("display","none")
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
@@ -29,16 +28,17 @@
     })
 })(jQuery); // end of jQuery name space
 
-window.onpagehide=function(){initialize()}
+window.onpagehide=function(){initialize()};
 window.onbeforeunload=function(){initialize()};
-window.onload = function(){loaded()}
+window.onload = function(){loaded()};
 
 function initialize(){
   $('#load_page').css("display","inline")
   $('body').css("overflow","hidden")
   $('body').removeClass('bg-image')
-}
+};
 
 function loaded(){
+  $('#load_page').css("display","none")
   $('body').css("overflow","auto")
-}
+};
