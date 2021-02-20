@@ -1,9 +1,6 @@
 (function($){
   $(function(){
 
-    $('#load_page').css("display","none")
-    $('body').css("overflow","auto")
-
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
@@ -33,6 +30,10 @@
 
 window.onpagehide=function(){initialize()}
 window.onbeforeunload=function(){initialize()};
+window.onload = function(){
+  $('#load_page').css("display","none")
+  $('body').css("overflow","auto")
+}
 
 function initialize(){
   $('#load_page').css("display","inline")
