@@ -47,9 +47,7 @@ $(function($) {
         setTimeout(function() { $body.addClass('loaded'); }, 1000);
 
         window.sr = ScrollReveal();
-        console.log('已加载')
         $('.reveal').each(function() {
-            console.log('已遍历')
             var $this = $(this),
                 config = {
                     easing: 'cubic-bezier(.51, .07, .75, .95)',
