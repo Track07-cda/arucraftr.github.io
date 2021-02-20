@@ -2,6 +2,11 @@
   background-image: url('http://fp1.fghrsh.net/2021/02/18/d02cdbb7634a17b4d6c7791f2b61c120.png!q80.webp') !important;
 }
 
+.parallax-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 #player-list {
   position: absolute;
   text-align: center;
@@ -15,7 +20,7 @@
 
 #player-list li {
   display: inline-block;
-  height: 148px;
+  height: 178px;
   width: 128px;
   margin: 30px;
 }
@@ -37,7 +42,7 @@
   background-color: #00000000;
   width: 128px;
   height: 128px;
-  backface-visibility: hidden;
+  backface-visibility: visible;
 }
 
 #player-list li:hover .card {

@@ -57,8 +57,8 @@
     </nav>
   </div>
 
-  <div id="index-banner" class="parallax-container">
-    <ul id="player-list" style="opacity: 0;">
+  <div id="index-banner" class="parallax-container reveal" data-reveal-distance="200px" data-reveal-duration="1000">
+    <ul id="player-list">
       <li>
         <div class="card"><img src="/assets/img/faces/114514yeshou.jpg" alt="114514yeshou" class="positive">
           <div class="negative">个人留言<p></p>
@@ -297,14 +297,14 @@
   <script src="/js/ie-detect.js"></script>
   <script type="text/javascript">
     $(window).on('load', function () {
-      $('#player-list').css('opacity', '1')
-      let delay_time = 0
-      $('#player-list li').each(function () {
-        var $this = $(this)
-        delay_time += 100
-        ScrollReveal().reveal($this, { duration: 500, distance: '50px', delay: delay_time });
-      })
-      delay_time = 0
+      // $('#player-list').css('opacity', '1')
+      // let delay_time = 0
+      // $('#player-list li').each(function () {
+      //   let $this = $(this)
+      //   delay_time += 100
+      //   ScrollReveal().reveal($this, { duration: 500, distance: '50px', delay: delay_time })
+      // })
+      // delay_time = 0
     })
   </script>
   <script src="/js/live2D-config.js"></script>
