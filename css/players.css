@@ -1,0 +1,67 @@
+.bg-image {
+  background-image: url('http://fp1.fghrsh.net/2021/02/18/d02cdbb7634a17b4d6c7791f2b61c120.png!q80.webp') !important;
+}
+
+#player-list {
+  position: absolute;
+  text-align: center;
+  top: 200px;
+  display: block;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: #ffffffc0;
+  transition: opacity 1s;
+}
+
+#player-list li {
+  display: inline-block;
+  height: 148px;
+  width: 128px;
+  margin: 30px;
+}
+
+.card {
+  background-color: #00000000;
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1;
+  -webkit-perspective: 1;
+}
+
+.positive {
+  display: inline-block;
+  background-color: #00000000;
+  width: 128px;
+  height: 128px;
+  backface-visibility: hidden;
+}
+
+#player-list li:hover .card {
+  transform: rotateY(180deg);
+}
+
+.negative {
+  position: relative;
+  background-color: #000000c0;
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  transform: rotateY(180deg);
+  bottom: 128px;
+  padding-top: 20px;
+  backface-visibility: hidden;
+}
+
+#player-list li p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.negative p {
+  font-size: 15px !important;
+  line-height: 20px;
+}
