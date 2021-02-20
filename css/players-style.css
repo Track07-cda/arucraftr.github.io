@@ -1,11 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 @font-face {
   font-family: "dylech30th";
   src: url("https://cdn.jsdelivr.net/gh/dylech30th/cdn@2.0.3/fonts/dylech30th.woff"); /* chrome、firefox */
