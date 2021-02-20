@@ -108,6 +108,10 @@ nav .nav-wrapper{
   width: 600px;
 }
 
+#live2d{
+  bottom: 30px;
+}
+
 body{
   font-family: 'dylech30th';
 }
