@@ -120,7 +120,7 @@ body{
   position: absolute;
   text-align: center;
   top:200px;
-  display: inline-block;
+  display: block;
   margin-left: 10vw;
   margin-right: 10vw;
   background-color: #ffffffc0;
@@ -173,4 +173,9 @@ body{
 #player-list li p{
   font-size: 20px;
   text-align: center;
+}
+
+.negative p{
+  font-size: 15px !important;
+  line-height: 20px;
 }
