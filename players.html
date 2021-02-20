@@ -54,7 +54,7 @@
     </div>
 
     <div id="index-banner" class="parallax-container">
-        <ul id="player_list">
+        <ul id="player-list" style="opacity: 0;">
             <li><div class="card"><img src="./faces/sophie_desu.jpg" class="positive"><div class="negative">个人留言</div></div><p>sophie_desu</p></li>
             <li><div class="card"><img src="./faces/Track07_cda.jpg" class="positive"><div class="negative">个人留言</div></div><p>Track07_cda</p></li>
             <li><div class="card"><img src="./faces/HGwolf.jpg" class="positive"><div class="negative">个人留言</div></div><p>HGwolf</p></li>
@@ -102,6 +102,15 @@
         if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE? 这tm什么年代了还在用IE
           alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
         }
+        $(window).on('load', function(){
+            $('#player-list').css('opacity','1')
+            delay_time = 0
+            $('#player-list li').each(function(){
+                var $this = $(this)
+                delay_time+=100
+                ScrollReveal().reveal($this, {duration: 500, distance: '50px', delay: delay_time});
+            });
+        });
     </script>
     <script src="assets/waifu-tips.min.js"></script>
     <script src="assets/live2d.min.js"></script>

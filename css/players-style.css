@@ -116,7 +116,7 @@ body{
   background-image: url('http://fp1.fghrsh.net/2021/02/18/d02cdbb7634a17b4d6c7791f2b61c120.png!q80.webp') !important;
 }
 
-#player_list{
+#player-list{
   position: absolute;
   text-align: center;
   top:200px;
@@ -124,9 +124,10 @@ body{
   margin-left: 10vw;
   margin-right: 10vw;
   background-color: #ffffffc0;
+  transition: opacity 1s;
 }
 
-#player_list li{
+#player-list li{
   display: inline-block;
   height: 148px;
   width: 128px;
@@ -153,7 +154,7 @@ body{
   backface-visibility: hidden;
 }
 
-#player_list li:hover .card{
+#player-list li:hover .card{
   transform: rotateY(180deg);
 }
 
@@ -169,7 +170,7 @@ body{
   backface-visibility: hidden;
 }
 
-#player_list li p{
+#player-list li p{
   font-size: 20px;
   text-align: center;
 }
