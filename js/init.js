@@ -33,6 +33,7 @@ window.onbeforeunload=function(){initialize()};
 window.onload = function(){loaded()};
 
 function initialize(){
+  //当刷新和和跳转时
   $('.waifu').css("display","none")
   $('#load_page').css("display","inline")
   $('body').css("overflow","hidden")
@@ -40,6 +41,7 @@ function initialize(){
 };
 
 function loaded(){
+  //当所有资源加载完毕时
   $('#load_page').css("display","none")
   $('body').css("overflow","auto")
 };
