@@ -1,223 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <title>aruCraftR</title>
-    <link rel="icon" href="/favicon/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>aruCraftR</title>
+  <link rel="icon" href="/assets/favicon/favicon.ico">
 
-    <!-- CSS  -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.css"
-        rel="stylesheet">
-    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="assets-online-api/waifu.min.css" rel="stylesheet" type="text/css">
+  <!-- CSS  -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.css"
+    rel="stylesheet">
+  <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="/assets-online-api/waifu.min.css" rel="stylesheet" type="text/css">
 </head>
+
 <body style="overflow: hidden; background-color: #fff;">
-    <div id="load_page" style="z-index: 100">
-        <h2 style="color:dimgrey; line-height: 100vh">加载中</h3>
+  <div id="load_page" style="z-index: 100">
+    <h2 style="color:dimgrey; line-height: 100vh">加载中</h3>
+  </div>
+  <!--Live2D-->
+  <div class="waifu reveal" style="display: block;" data-reveal-distance="300px" data-reveal-delay="500"
+    data-reveal-duration="1200">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+      <span class="fui-home" style="line-height: 20px;"></span>
+      <span class="fui-chat" style="line-height: 20px;"></span>
+      <span class="fui-eye" style="line-height: 20px;"></span>
+      <span class="fui-user" style="line-height: 20px;"></span>
+      <span class="fui-photo" style="line-height: 20px;"></span>
+      <span class="fui-info-circle" style="line-height: 20px;"></span>
+      <span class="fui-cross" style="line-height: 20px;"></span>
     </div>
-    <!--Live2D-->
-    <div class="waifu reveal" style="display: block;" data-reveal-distance="300px" data-reveal-delay="500" data-reveal-duration="1200">
-        <div class="waifu-tips"></div>
-        <canvas id="live2d" class="live2d"></canvas>
-        <div class="waifu-tool">
-            <span class="fui-home" style="line-height: 20px;"></span>
-            <span class="fui-chat" style="line-height: 20px;"></span>
-            <span class="fui-eye" style="line-height: 20px;"></span>
-            <span class="fui-user" style="line-height: 20px;"></span>
-            <span class="fui-photo" style="line-height: 20px;"></span>
-            <span class="fui-info-circle" style="line-height: 20px;"></span>
-            <span class="fui-cross" style="line-height: 20px;"></span>
+  </div>
+  <!--导航栏-->
+  <div class="navbar-fixed">
+    <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px"
+      data-reveal-duration="1000">
+      <div class="navbar-bg" style="opacity: 0;"></div>
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">aruCraftR</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/announcement" class="teal-text text-lighten-2">Announcement </a></li>
+          <li><a href="/players" class="teal-text text-lighten-2">Players </a></li>
+          <li><a href="https://mcmaps.114514.ovh" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="/announcement" class="teal-text text-lighten-2">Announcement </a></li>
+          <li><a href="https://mcmaps.114514.ovh" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container" id="top-container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2 reveal" data-reveal-distance="-50px"
+          data-reveal-duration="800"><img id="main-logo"
+            src="http://fp1.fghrsh.net/2021/02/19/8c9e3b2107ff7104d938ca47b83a0a15.png!q80.webp" alt="main logo" /></h1>
+        <div class="row center">
+          <h5 class="header col s12 light reveal" data-reveal-distance="-50px" data-reveal-delay="400"
+            data-reveal-duration="600">A Minecraft Server </h5>
         </div>
-    </div>
-    <!--导航栏-->
-    <div class="navbar-fixed">
-        <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px" data-reveal-duration="1000">
-            <div class="navbar-bg" style="opacity: 0;"></div>
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="https://arucraftr.github.io/" class="brand-logo">aruCraftR</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="https://arucraftr.github.io/announcement" class="teal-text text-lighten-2">Announcement </a></li>
-                    <li><a href="https://arucraftr.github.io/players" class="teal-text text-lighten-2">Players </a></li>
-                    <li><a href="https://mcmaps.114514.ovh" class="teal-text text-lighten-2">BlueMap</a></li>
-                    <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
-                </ul>
-
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="https://arucraftr.github.io/announcement" class="teal-text text-lighten-2">Announcement </a></li>
-                    <li><a href="https://mcmaps.114514.ovh" class="teal-text text-lighten-2">BlueMap</a></li>
-                    <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
-                </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-    </div>
-
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container" id="top-container">
-                <br><br>
-                <h1 class="header center teal-text text-lighten-2 reveal" data-reveal-distance="-50px" data-reveal-duration="800"><img id="main-logo" src="http://fp1.fghrsh.net/2021/02/19/8c9e3b2107ff7104d938ca47b83a0a15.png!q80.webp"/></h1>
-                <div class="row center">
-                    <h5 class="header col s12 light reveal" data-reveal-distance="-50px" data-reveal-delay="400" data-reveal-duration="600">A Minecraft Server </h5>
-                </div>
-                <div id="join_us" class="row center reveal" data-reveal-distance="-50px" data-reveal-delay="600" data-reveal-duration="600">
-                    <!-- Dropdown Trigger -->
-                    <a class='dropdown-button btn waves-effect waves-light' data-beloworigin="true" href='#' data-activates='dropdown1'>join us</a>
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="https://jq.qq.com/?_wv=1027&k=Ot8SRDbh" target="_blank">QQ</a></li>
-                        <li><a href="https://discord.gg/zQzBPCW" target="_blank">Discord</a></li>
-                    </ul>
-                </div>
-                <br><br>
-
-            </div>
+        <div id="join_us" class="row center reveal" data-reveal-distance="-50px" data-reveal-delay="600"
+          data-reveal-duration="600">
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-button btn waves-effect waves-light' data-beloworigin="true" href='#'
+            data-activates='dropdown1'>join us</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="https://jq.qq.com/?_wv=1027&k=Ot8SRDbh" target="_blank">QQ</a></li>
+            <li><a href="https://discord.gg/zQzBPCW" target="_blank">Discord</a></li>
+          </ul>
         </div>
-        <div class="parallax"><img src="http://fp1.fghrsh.net/2021/02/18/d02cdbb7634a17b4d6c7791f2b61c120.png!q80.webp" alt="Unsplashed background img 1"></div>
+        <br><br>
+
+      </div>
     </div>
+    <div class="parallax"><img src="http://fp1.fghrsh.net/2021/02/18/d02cdbb7634a17b4d6c7791f2b61c120.png!q80.webp"
+        alt="Unsplashed background img 1"></div>
+  </div>
 
 
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-duration="500">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">快 速 访 问</h5>
+
+            <p class="light">我们服务器的访问速度依靠于服主和热心群友的带宽，感谢热心群友的爱（技术支持）。爱是最好的带宽！</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-delay="250" data-reveal-duration="500">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">团 队 合 作</h5>
+
+            <p class="light">服务器氛围友好，和谐，各成员平等互助相处，友好交流，积极向上，团结合作，无私奉献。服主付出巨大，是当之无愧的爱的战士！是当之无愧的服主模范！</p>
+          </div>
+        </div>
+
+
+        <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-delay="500" data-reveal-duration="500">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">轻 松 游 玩</h5>
+
+            <p class="light">服务器承诺永久公益免费。<br>服务器设有公共工业园区，资源丰富，全服共享，是白嫖党的乐土。
+              </br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center reveal" data-reveal-distance="-50px" data-reveal-duration="500">
+          <h5 class="header col s12 light">这里没有任何限制<br>你可以发挥你的特长<br>只有一个要求，不要<a class="tooltipped"
+              data-position="bottom" data-delay="50" data-tooltip="最可怕的不是熊，是不懂红石还非要用精密机器的小天才">熊服</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="http://fp1.fghrsh.net/2021/02/18/99178e2f26aae7aa2e846280955970f9.png!q80.webp"
+        alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4 class="reveal" data-reveal-distance="-40px" data-reveal-duration="500">历经两周目</h4>
+          <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px"
+            data-reveal-delay="300" data-reveal-duration="500">第一周目为Craftr服务器，服主为Yikex。</p>
+          <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px"
+            data-reveal-delay="600" data-reveal-duration="500">第二周目，也就是现周目，服主为sophie_desu。</p>
+          <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px"
+            data-reveal-delay="900" data-reveal-duration="500"> - 在此也感谢Track07_cda与YGOOB的帮助，当然，还有<a class="tooltipped"
+              data-position="bottom" data-delay="50" data-tooltip="建议服务器名称为KDH和GayCraft是什么啊喂">积极提出建议</a>的大家！</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">
+            <!--第3张背景图中的字-->
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="http://fp1.fghrsh.net/2021/02/18/80802b5c41bea15b51de132f0d774776.png!q80.webp"
+        alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
     <div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-duration="500">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">快 速 访 问</h5>
-
-                        <p class="light">我们服务器的访问速度依靠于服主和热心群友的带宽，感谢热心群友的爱（技术支持）。爱是最好的带宽！</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-delay="250" data-reveal-duration="500">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center">团 队 合 作</h5>
-
-                        <p class="light">服务器氛围友好，和谐，各成员平等互助相处，友好交流，积极向上，团结合作，无私奉献。服主付出巨大，是当之无愧的爱的战士！是当之无愧的服主模范！</p>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-delay="500" data-reveal-duration="500">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                        <h5 class="center">轻 松 游 玩</h5>
-
-                        <p class="light">服务器承诺永久公益免费。<br>服务器设有公共工业园区，资源丰富，全服共享，是白嫖党的乐土。
-                        </br>
-                    </div>
-                </div>
-            </div>
-
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">aruCraftr</h5>
+          <p class="grey-text text-lighten-4">网页仍处于开发阶段，如有任何建议，请前往QQ群或Discord中的dev频道提出</p>
+          <img id="count" src="https://count.getloli.com/get/@arucraftr?theme=rule34" alt=":name" />
         </div>
-    </div>
-
-
-    <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center reveal" data-reveal-distance="-50px" data-reveal-duration="500">
-                    <h5 class="header col s12 light">这里没有任何限制<br>你可以发挥你的特长<br>只有一个要求，不要<a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="最可怕的不是熊，是不懂红石还非要用精密机器的小天才">熊服</a>
-                    </h5>
-                </div>
-            </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">网页索引</h5>
+          <ul>
+            <li>
+              <h6>子页面建设中...</h6>
+            </li>
+            <li><a class="white-text" href="./announcement">公告</a></li>
+            <li><a class="white-text" href="./players">玩家列表</a></li>
+            <li><a class="white-text" href="./gallery">画廊</a></li>
+          </ul>
         </div>
-        <div class="parallax"><img src="http://fp1.fghrsh.net/2021/02/18/99178e2f26aae7aa2e846280955970f9.png!q80.webp" alt="Unsplashed background img 2"></div>
-    </div>
-
-    <div class="container">
-        <div class="section">
-
-            <div class="row">
-                <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4 class="reveal" data-reveal-distance="-40px" data-reveal-duration="500">历经两周目</h4>
-                    <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px" data-reveal-delay="300" data-reveal-duration="500">第一周目为Craftr服务器，服主为Yikex。</p>
-                    <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px" data-reveal-delay="600" data-reveal-duration="500">第二周目，也就是现周目，服主为sophie_desu。</p>
-                    <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px" data-reveal-delay="900" data-reveal-duration="500"> - 在此也感谢Track07_cda与YGOOB的帮助，当然，还有<a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="建议服务器名称为KDH和GayCraft是什么啊喂">积极提出建议</a>的大家！</p>
-                </div>
-            </div>
-
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
         </div>
-    </div>
+      </div>
+  </footer>
 
 
-    <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light"><!--第3张背景图中的字-->
-                    </h5>
-                </div>
-            </div>
-        </div>
-        <div class="parallax"><img src="http://fp1.fghrsh.net/2021/02/18/80802b5c41bea15b51de132f0d774776.png!q80.webp" alt="Unsplashed background img 3"></div>
-    </div>
-
-    <footer class="page-footer teal">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">aruCraftr</h5>
-                    <p class="grey-text text-lighten-4">网页仍处于开发阶段，如有任何建议，请前往QQ群或Discord中的dev频道提出</p>
-                    <img id="count" src="https://count.getloli.com/get/@arucraftr?theme=rule34" alt=":name" />
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">网页索引</h5>
-                    <ul>
-                        <li><h6>子页面建设中...</h6></li>
-                        <li><a class="white-text" href="https://arucraftr.github.io/announcement">公告</a></li>
-                        <li><a class="white-text" href="https://arucraftr.github.io/players">玩家列表</a></li>
-                        <li><a class="white-text" href="https://arucraftr.github.io/gallery">画廊</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-    </footer>
-
-
-    <!--  Scripts-->
-    <script src="assets-online-api/jquery.min.js"></script>
-    <script src="assets-online-api/jquery-ui.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/appear.min.js"></script>
-    <script src="js/scrollreveal.min.js"></script>
-    <script src="js/general.min.js"></script>
-    <script src="js/init.js"></script>
-    <script type="text/javascript">
-        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE? 这tm什么年代了还在用IE
-          alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
-        }
-    </script>
-    <script src="assets-online-api/waifu-tips.min.js"></script>
-    <script src="assets-online-api/live2d.min.js"></script>
-    <script type="text/javascript">
-        /* 可直接修改部分参数 */
-        live2d_settings['hitokotoAPI'] = 'hitokoto.cn';
-        live2d_settings['modelId'] = 1;
-        live2d_settings['waifuFontSize']='17px'; 
-        live2d_settings['canCloseLive2d'] = false;
-        live2d_settings['canTurnToHomePage'] = false;
-        live2d_settings['modelTexturesId'] = 87;
-        live2d_settings['modelStorage'] = true;
-        live2d_settings['waifuEdgeSide'] = 'right:30';
-        live2d_settings['waifuDraggable'] = 'axis-x';
-        initModel("assets-online-api/waifu-tips.json")
-    </script>
+  <!--  Scripts-->
+  <script src="/assets-online-api/jquery.min.js"></script>
+  <script src="/assets-online-api/jquery-ui.min.js"></script>
+  <script src="/js/materialize.min.js"></script>
+  <script src="/js/appear.min.js"></script>
+  <script src="/js/scrollreveal.min.js"></script>
+  <script src="/js/general.min.js"></script>
+  <script src="/js/init.js"></script>
+  <script src="/js/ie-detect.js"></script>
+  <script src="/assets-online-api/waifu-tips.min.js"></script>
+  <script src="/assets-online-api/live2d.min.js"></script>
+  <script src="/js/live2D-config.js"></script>
 
 </body>
 
