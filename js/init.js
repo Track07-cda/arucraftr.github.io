@@ -33,6 +33,7 @@ window.onbeforeunload=function(){initialize()};
 window.onload = function(){loaded()};
 
 function initialize(){
+  $('.waifu').css("display","none")
   $('#load_page').css("display","inline")
   $('body').css("overflow","hidden")
   $('body').removeClass('bg-image')
