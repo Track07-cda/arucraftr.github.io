@@ -31,8 +31,11 @@
     })
 })(jQuery); // end of jQuery name space
 
-window.onbeforeunload=function(){
+window.onpagehide=function(){initialize()}
+window.onbeforeunload=function(){initialize()};
+
+function initialize(){
   $('#load_page').css("display","inline")
   $('body').css("overflow","hidden")
-  $('body').css("background-color","white")
-};
+  $('body').removeClass('bg-image')
+}
