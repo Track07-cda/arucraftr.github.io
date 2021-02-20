@@ -3,5 +3,5 @@ names.sort()
 
 def outhtml():
     for name in names:
-        print('<li>'+'<img src="'+'/faces/'+name+'.jpg'+'"'+'<p>'+name+'</p></li>')
+        print('            <li><div class="card"><img src="'+'/faces/'+name+'.jpg'+'" class="positive"><div class="negative"><br>个人留言</div></div><p>'+name+'</p></li>')
 outhtml()
