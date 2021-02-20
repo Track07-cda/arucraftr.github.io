@@ -1,5 +1,6 @@
 (function($){
   $(function(){
+    $('#load_page').css("display","none")
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
@@ -30,13 +31,14 @@
 
 window.onpagehide=function(){initialize()}
 window.onbeforeunload=function(){initialize()};
-window.onload = function(){
-  $('#load_page').css("display","none")
-  $('body').css("overflow","auto")
-}
+window.onload = function(){loaded()}
 
 function initialize(){
   $('#load_page').css("display","inline")
   $('body').css("overflow","hidden")
   $('body').removeClass('bg-image')
+}
+
+function loaded(){
+  $('body').css("overflow","auto")
 }
